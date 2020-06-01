@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<title>Minimum Bootstrap HTML Skeleton</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+        var keyList="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+        var tmp=""
+        function passwordGenerator(plength){
+            tmp=""
+            for(i=0;i<plength;i++){
+                tmp+=keyList.charAt(Math.random()*keyList.length)
+                
+            }
+            return tmp
+        }
+        function generator(elementno){
+            document.passGen.output.value=passwordGenerator(elementno);
+        }
+        
+    </script>
+
+	<!--  -->
+
+	
+
+</head>
+
+<body>
+
+	<div class="container">
+	
+    <form action="" name="passGen">
+        <input type="text" name="output">
+        <input type="button" value="generate password" onClick="generator(this.form.gen.value)"><br>
+        <strong>length of password: </strong>
+        <input type="text" name="gen" size="2" value="6">
+    </form>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	
+
+</body>
+
+</html>
